@@ -1,0 +1,12 @@
+.card {
+	max-width: 30rem;
+	max-height: 35rem;
+	width: 100%;
+	margin: 0 2rem;
+	border-radius: 0.5rem;
+}
+
+.icon {
+	height: 65px;
+	width: 65px;
+}

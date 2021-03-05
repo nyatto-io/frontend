@@ -1,0 +1,17 @@
+.container {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	height: 30px;
+	width: 30px;
+	background-color: #fff !important;
+	border-radius: 50%;
+}
+
+.white-content {
+	background-color: #1e1e2f !important;
+}
+
+.white-content .fas {
+	color: #fff;
+}

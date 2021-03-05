@@ -1,55 +1,78 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4",
-    "workbox-background-sync": "^5.1.3",
-    "workbox-broadcast-update": "^5.1.3",
-    "workbox-cacheable-response": "^5.1.3",
-    "workbox-core": "^5.1.3",
-    "workbox-expiration": "^5.1.3",
-    "workbox-google-analytics": "^5.1.3",
-    "workbox-navigation-preload": "^5.1.3",
-    "workbox-precaching": "^5.1.3",
-    "workbox-range-requests": "^5.1.3",
-    "workbox-routing": "^5.1.3",
-    "workbox-strategies": "^5.1.3",
-    "workbox-streams": "^5.1.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "frontend",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@avidianity/model": "avidianity/model",
+		"@avidianity/session": "avidianity/session",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"@types/jest": "^26.0.15",
+		"@types/jquery": "^3.5.5",
+		"@types/lodash": "^4.14.168",
+		"@types/node": "^12.0.0",
+		"@types/react": "^16.9.53",
+		"@types/react-dom": "^16.9.8",
+		"@types/bootstrap": "4.3.1",
+		"@types/chart.js": "^2.9.30",
+		"@types/faker": "^5.1.7",
+		"@types/react-router-dom": "^5.1.7",
+		"@types/slug": "^0.9.1",
+		"axios": "^0.21.1",
+		"bootstrap": "4.3.1",
+		"chart.js": "2.7.1",
+		"dayjs": "^1.10.4",
+		"faker": "^5.4.0",
+		"jquery": "3.2.1",
+		"lodash": "^4.17.21",
+		"perfect-scrollbar": "1.4.0",
+		"popper.js": "^1.16.1",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-hook-form": "^6.15.3",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "4.0.2",
+		"slug": "^4.0.3",
+		"typeface-poppins": "^1.1.13",
+		"typescript": "^4.0.3",
+		"web-vitals": "^0.2.4",
+		"workbox-background-sync": "^5.1.3",
+		"workbox-broadcast-update": "^5.1.3",
+		"workbox-cacheable-response": "^5.1.3",
+		"workbox-core": "^5.1.3",
+		"workbox-expiration": "^5.1.3",
+		"workbox-google-analytics": "^5.1.3",
+		"workbox-navigation-preload": "^5.1.3",
+		"workbox-precaching": "^5.1.3",
+		"workbox-range-requests": "^5.1.3",
+		"workbox-routing": "^5.1.3",
+		"workbox-strategies": "^5.1.3",
+		"workbox-streams": "^5.1.3"
+	},
+	"license": "MIT",
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
