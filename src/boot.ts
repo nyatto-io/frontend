@@ -38,4 +38,6 @@ if (session.hasToken() && session.get('auth-checking') !== true && session.get('
 		.finally(() => session.set('auth-checking', false).set('auth-checked', true));
 }
 
+axios.options(`${url}`).catch(console.error);
+
 axios.get(`${url}/sanctum/csrf-cookie`).catch(console.error);
