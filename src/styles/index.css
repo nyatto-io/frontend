@@ -124,3 +124,7 @@ hr {
 .white-content .pagination .page-item:not(.active) .page-link {
 	color: #212529;
 }
+
+.navbar-toggler.collapsed .fas {
+	color: #fff;
+}

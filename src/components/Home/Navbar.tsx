@@ -23,7 +23,7 @@ const Navbar: FC<Props> = (props) => {
 				aria-controls='navbarSupportedContent'
 				aria-expanded='false'
 				aria-label='Toggle navigation'>
-				<span className='navbar-toggler-icon'></span>
+				<i className='fas fa-ellipsis-v'></i>
 			</button>
 
 			<div className='collapse navbar-collapse' id='navbarSupportedContent'>
