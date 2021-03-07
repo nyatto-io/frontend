@@ -1,0 +1,21 @@
+.header {
+	margin-top: 5rem;
+}
+
+.globe-container {
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	width: 100%;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -1;
+}
+
+@media screen and (min-width: 576px) {
+	.globe-container {
+		width: 75%;
+	}
+}

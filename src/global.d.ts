@@ -24,6 +24,9 @@ declare global {
 	interface Window {
 		$: JQueryStatic;
 		jQuery: JQueryStatic;
+		TrackballControls: any;
+		THREE: any;
+		ThreeGlobe: any;
 	}
 }
 
