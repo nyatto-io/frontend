@@ -19834,7 +19834,7 @@ Copyright (c) 2015 Daniel Eden
 
 .white-content .card:not(.card-white) {
 	background: #ffffff;
-	box-shadow: 0 1px 15px 0 rgba(, , , 0.05);
+	box-shadow: 0 1px 15px 0 rgba(150, 150, 150, 0.05);
 }
 
 .white-content .card:not(.card-white) .card-header {
@@ -20413,6 +20413,14 @@ Copyright (c) 2015 Daniel Eden
 	background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
 }
 
+.card-user .author .block.block-two[data-color='primary'] {
+	background: rgba(225, 78, 202, 0.6);
+	background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+}
+
 .card-user .author .block.block-two[data-color='blue'] {
 	background: rgba(94, 114, 228, 0.6);
 	background: -webkit-linear-gradient(to right, rgba(94, 114, 228, 0.6) 0%, rgba(94, 114, 228, 0) 100%);
@@ -20441,6 +20449,14 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .author .block.block-three[data-color='pink'] {
+	background: rgba(225, 78, 202, 0.6);
+	background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: -moz-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+	background: linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
+}
+
+.card-user .author .block.block-three[data-color='primary'] {
 	background: rgba(225, 78, 202, 0.6);
 	background: -webkit-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
 	background: -o-linear-gradient(to right, rgba(225, 78, 202, 0.6) 0%, rgba(225, 78, 202, 0) 100%);
