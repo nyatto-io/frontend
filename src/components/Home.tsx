@@ -24,7 +24,7 @@ export default function Home(props: Props) {
 						<p className='lead'>
 							An <code>ad-less</code> anime and manga streaming service.
 						</p>
-						<a href='https://github.com/nyatto' className='btn btn-primary btn-sm mx-1' rel='noreferrer' target='_blank'>
+						<a href='https://github.com/nyatto-io' className='btn btn-primary btn-sm mx-1' rel='noreferrer' target='_blank'>
 							<i className='fab fa-github mr-1'></i>
 							Source
 						</a>
