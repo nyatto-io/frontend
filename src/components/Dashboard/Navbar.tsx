@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory, useRouteMatch } from 'react-router-dom';
 import { User } from '../../contracts/User';
 import { session } from '../../libraries/session';
@@ -14,6 +14,8 @@ type Props = {};
 export default function Navbar(props: Props) {
 	const match = useRouteMatch();
 	const history = useHistory();
+	const user = session.user() as User;
+	const [picture, setPicture] = useState(user?.picture?.url || Icon);
 
 	const url = (path: string) => `${match.path}${path}`;
 
@@ -29,7 +31,16 @@ export default function Navbar(props: Props) {
 		}
 	};
 
-	const user = session.user() as User;
+	useEffect(() => {
+		const key = session.listen<User>('user-session', (user) => {
+			if (user && user.picture && user.picture.url) {
+				setPicture(user.picture.url);
+			}
+		});
+		return () => {
+			session.unlisten('user-session', key);
+		};
+	}, []);
 
 	return (
 		<>
@@ -79,7 +90,7 @@ export default function Navbar(props: Props) {
 									<p className='d-lg-none'>Notifications</p>
 								</a>
 								<ul className='dropdown-menu dropdown-menu-right dropdown-navbar'>
-									<li className='nav-link'>
+									{/* <li className='nav-link'>
 										<a href='/' className='nav-item dropdown-item'>
 											Mike John responded to your email
 										</a>
@@ -103,13 +114,13 @@ export default function Navbar(props: Props) {
 										<a href='/' className='nav-item dropdown-item'>
 											Another one
 										</a>
-									</li>
+									</li> */}
 								</ul>
 							</li>
 							<li className='dropdown nav-item'>
 								<a href='/' className='dropdown-toggle nav-link' data-toggle='dropdown'>
 									<div className='photo'>
-										<img src={user?.picture?.url || Icon} alt='Profile' className='border shadow' />
+										<img src={picture} alt='Profile' className='border shadow' />
 									</div>
 									<b className='caret d-none d-lg-block d-xl-block'></b>
 									<p className='d-lg-none'>Account</p>
