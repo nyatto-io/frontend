@@ -1,9 +1,8 @@
-import { Paginated } from '@avidianity/model';
 import { createContext } from 'react';
 import { Anime } from '../contracts/Anime';
 import { Favorite } from '../contracts/Favorite';
 import { Manga } from '../contracts/Manga';
-import { Genre } from '../contracts/misc';
+import { Genre, Paginated } from '../contracts/misc';
 import { makeDummyPagination } from '../misc/helpers';
 
 export const ColorContext = createContext({

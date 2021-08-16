@@ -1,5 +1,5 @@
-import { Paginated } from '@avidianity/model';
 import React from 'react';
+import { Paginated } from '../../contracts/misc';
 import { outIf, toBool } from '../../misc/helpers';
 
 type Props = {

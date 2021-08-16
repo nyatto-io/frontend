@@ -2,7 +2,6 @@ import { session } from './libraries/session';
 import './misc/shims';
 import axios from 'axios';
 import 'typeface-poppins';
-import { Model } from '@avidianity/model';
 
 const url = process.env.REACT_APP_BACKEND_URL;
 
@@ -24,8 +23,6 @@ axios.interceptors.request.use((config) => {
 session.listen<string>(session.token_key, (token) => {
 	axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 });
-
-Model.setAxios(axios);
 
 session.set('auth-checked', false);
 

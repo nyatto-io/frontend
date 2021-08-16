@@ -1,4 +1,3 @@
-import { Paginated } from '@avidianity/model';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
@@ -13,6 +12,7 @@ import List from '../Manga/List';
 import Search from '../Manga/Search';
 import View from '../Manga/View';
 import Read from '../Manga/Read';
+import { Paginated } from '../../contracts/misc';
 
 type Props = {};
 

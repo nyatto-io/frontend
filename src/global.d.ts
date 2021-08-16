@@ -1,5 +1,3 @@
-import JQuery from '@types/jquery';
-
 declare global {
 	type ColorTypes = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger';
 

@@ -15,9 +15,8 @@ import Splash from './Shared/Splash';
 import $ from 'jquery';
 import ScrollToTop from './Shared/ScrollToTop';
 import axios from 'axios';
-import { Genre } from '../contracts/misc';
+import { Genre, Paginated } from '../contracts/misc';
 import { MediaMap } from '../misc/constants';
-import { Paginated } from '@avidianity/model';
 import { Anime } from '../contracts/Anime';
 import { Favorite } from '../contracts/Favorite';
 import ForgotPassword from './Auth/ForgotPassword';
@@ -68,7 +67,7 @@ function App() {
 		try {
 			const { data } = await axios.get<Genre[]>(`/${MediaMap[type]}/${type}?type=genres`);
 			setGenres(data);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 		} finally {
 			setLoadedGenres(true);
@@ -94,7 +93,7 @@ function App() {
 				...except(data, ['data']),
 			});
 			session.set(`${outIf(type.length > 0, type, 'all')}-favorites-page`, data.current_page);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 		} finally {
 			setLoadedFavorites(true);
@@ -121,7 +120,7 @@ function App() {
 				import('../assets/js/bd'),
 				import('../assets/js/demo'),
 			]);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 		} finally {
 			setLoaded(true);

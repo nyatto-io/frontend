@@ -14,7 +14,7 @@ type Props = {};
 export default function Navbar(props: Props) {
 	const match = useRouteMatch();
 	const history = useHistory();
-	const user = session.user() as User;
+	const user: User = session.user() as any;
 	const [picture, setPicture] = useState(user?.picture?.url || Icon);
 
 	const url = (path: string) => `${match.path}${path}`;
@@ -22,7 +22,7 @@ export default function Navbar(props: Props) {
 	const logout = async () => {
 		try {
 			await axios.post('/auth/logout');
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 		} finally {
 			session.clearAll();
@@ -38,7 +38,7 @@ export default function Navbar(props: Props) {
 			}
 		});
 		return () => {
-			session.unlisten('user-session', key);
+			session.unlisten(key);
 		};
 	}, []);
 

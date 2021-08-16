@@ -1,4 +1,4 @@
-import { Model } from '@avidianity/model';
+import { Model } from './Model';
 import { Favorite as FavoriteContract } from '../contracts/Favorite';
 import { Anime as AnimeContract } from '../contracts/Anime';
 import { Manga as MangaContract } from '../contracts/Manga';

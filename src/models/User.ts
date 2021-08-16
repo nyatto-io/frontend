@@ -1,4 +1,4 @@
-import { Model } from '@avidianity/model';
+import { Model } from './Model';
 import { User as UserContract } from '../contracts/User';
 
 export class User extends Model<UserContract> {

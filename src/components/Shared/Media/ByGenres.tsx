@@ -1,6 +1,5 @@
-import { Paginated } from '@avidianity/model';
 import React, { FC, useContext } from 'react';
-import { Favorable } from '../../../contracts/misc';
+import { Favorable, Paginated } from '../../../contracts/misc';
 import { FavoritesContext } from '../../../libraries/contexts';
 import { sentencify, outIf, ucwords } from '../../../misc/helpers';
 import Pagination from '../Pagination';

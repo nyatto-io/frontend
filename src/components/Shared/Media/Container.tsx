@@ -1,5 +1,5 @@
-import { Paginated } from '@avidianity/model';
 import React, { FC } from 'react';
+import { Paginated } from '../../../contracts/misc';
 import Pagination from '../Pagination';
 import SplashMini from '../SplashMini';
 import Info from './Info';

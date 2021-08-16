@@ -1,7 +1,6 @@
-import { Paginated } from '@avidianity/model';
 import React from 'react';
 import { Favorite } from '../contracts/Favorite';
-import { Favorable } from '../contracts/misc';
+import { Favorable, Paginated } from '../contracts/misc';
 import Container from './Favorites/Container';
 import Item from './Favorites/Item';
 import Pagination from './Shared/Pagination';

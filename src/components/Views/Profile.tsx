@@ -25,7 +25,7 @@ type Inputs = {
 
 export default function Profile(props: Props) {
 	const [processing, setProcessing] = useState(false);
-	const user = session.user() as User;
+	const user: User = session.user() as any;
 	const { color } = useContext(ColorContext);
 	const [picture, setPicture] = useState(user?.picture?.url || camera);
 
@@ -45,7 +45,7 @@ export default function Profile(props: Props) {
 
 			session.user(response.data);
 			Notif.info('Profile has been updated.');
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			handleError(error);
 		} finally {
@@ -64,7 +64,7 @@ export default function Profile(props: Props) {
 			session.user(data);
 			Notif.info('Profile picture uploaded.');
 			setPicture(data.picture?.url || camera);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			handleError(error);
 		} finally {

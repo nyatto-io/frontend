@@ -1,8 +1,8 @@
-import { Paginated } from '@avidianity/model';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
 import { Anime as AnimeContract } from '../../contracts/Anime';
+import { Paginated } from '../../contracts/misc';
 import { AnimesContext, FavoritesContext, GenresContext } from '../../libraries/contexts';
 import { SearchBus } from '../../libraries/events';
 import { session } from '../../libraries/session';
@@ -39,7 +39,7 @@ export default function Anime(props: Props) {
 			});
 
 			session.set(`${group}-page`, data.current_page);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			handleError(error);
 		} finally {

@@ -2,6 +2,7 @@ import _, { isEmpty } from 'lodash';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import $ from 'jquery';
+import { Paginated } from '../contracts/misc';
 
 dayjs.extend(relativeTime);
 
@@ -84,7 +85,7 @@ export function makeDummyPagination() {
 		prev_page_url: '',
 		to: '',
 		total: 0,
-	};
+	} as Paginated<any>;
 }
 
 export function excludeEmpty<T, K extends keyof T>(data: T, keys: K[]) {
@@ -106,7 +107,7 @@ export function toBool(data: any) {
 }
 
 export function outIf<T>(condition: boolean, output: T, defaultValue: any = ''): T {
-	return condition ? output : ((defaultValue as unknown) as T);
+	return condition ? output : (defaultValue as unknown as T);
 }
 
 export function ucfirst(string: string) {
@@ -186,9 +187,9 @@ export function parseDate(date: string) {
 }
 
 export function makeMask<T extends Function>(callable: T, callback: Function) {
-	return (((data: any) => {
+	return ((data: any) => {
 		return callable(callback(data));
-	}) as unknown) as T;
+	}) as unknown as T;
 }
 
 export function except<T, K extends keyof T>(data: T, keys: Array<K>) {
