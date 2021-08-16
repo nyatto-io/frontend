@@ -120,7 +120,7 @@ export default function Navbar(props: Props) {
 							<li className='dropdown nav-item'>
 								<a href='/' className='dropdown-toggle nav-link' data-toggle='dropdown'>
 									<div className='photo'>
-										<img src={picture} alt='Profile' className='border shadow' />
+										<img src={picture} alt='Profile' className='shadow-sm rounded-circle' />
 									</div>
 									<b className='caret d-none d-lg-block d-xl-block'></b>
 									<p className='d-lg-none'>Account</p>

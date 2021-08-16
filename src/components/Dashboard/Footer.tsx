@@ -17,7 +17,7 @@ export default function Footer(props: Props) {
 						</a>
 					</li>
 					<li className='nav-item'>
-						<a href='https://github.com/avidianity/home' className='nav-link' target='_blank' rel='noreferrer'>
+						<a href='https://github.com/nyatto-io' className='nav-link' target='_blank' rel='noreferrer'>
 							Github
 						</a>
 					</li>

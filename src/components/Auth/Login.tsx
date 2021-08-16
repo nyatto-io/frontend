@@ -61,7 +61,7 @@ export default function Login(props: Props) {
 		setResent(true);
 		try {
 			await axios.post('/auth/resend-email', credentials);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			Notif.error('Unable to resend verification email.', { align: 'center' });
 			setResent(false);

@@ -31,7 +31,7 @@ const Settings: FC<Props> = (props) => {
 		setLoaded(false);
 		try {
 			await Promise.all([fetchSettings(), fetchDrivers()]);
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			Notif.error('Unable to boot settings.');
 		} finally {
@@ -76,7 +76,7 @@ const Settings: FC<Props> = (props) => {
 			const { data } = await axios.post<Setting[]>('/auth/settings/bulk', { payload: settings });
 			setSettings(data);
 			Notif.info('Settings saved successfully.');
-		} catch (error) {
+		} catch (error: any) {
 			console.log(error.toJSON());
 			handleError(error);
 		} finally {

@@ -1,5 +1,4 @@
 import { State } from '@avidian/state';
-import { Key } from '@avidian/events';
 
 export const session = new (class Session extends State {
 	token_key = 'token';
@@ -29,7 +28,7 @@ export const session = new (class Session extends State {
 			return this.set('user', user).set('user-session', user);
 		}
 
-		return this.set('user', user).set('user-session', user);
+		return this.get('user-session') || this.get('user');
 	}
 
 	clearAll() {
