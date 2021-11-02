@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect, useRef, useState } from 'react';
 import { Link, useHistory, useRouteMatch } from 'react-router-dom';
 import { Anime } from '../../contracts/Anime';
 import { AnimesContext, ColorContext } from '../../libraries/contexts';
@@ -24,7 +24,7 @@ const Watch: FC<Props> = (props) => {
 	const { id } = params;
 	const [episode, setEpisode] = useState(Number(params.episode));
 	const history = useHistory();
-
+	const iframe = useRef<HTMLIFrameElement>(null);
 	const { animes, animesLoaded } = useContext(AnimesContext);
 	const { color } = useContext(ColorContext);
 
@@ -81,7 +81,13 @@ const Watch: FC<Props> = (props) => {
 			<div className='row'>
 				<div className='col-12'>
 					<div className={`${styles['iframe-wrapper']} ${outIf(isEmpty(url), 'd-none')}`}>
-						<iframe src={url} frameBorder='0' allowFullScreen className={`${styles.iframe}`} title={anime.title}></iframe>
+						<iframe
+							ref={iframe}
+							src={url}
+							frameBorder='0'
+							allowFullScreen
+							className={`${styles.iframe}`}
+							title={anime.title}></iframe>
 					</div>
 				</div>
 				<div className='col-12 d-flex py-3'>
